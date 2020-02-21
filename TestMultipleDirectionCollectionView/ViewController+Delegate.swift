@@ -46,14 +46,12 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate {
 extension ViewController: MultiDirectionLayoutV2Delegate {
     
     func collectionView(_ collectionView: UICollectionView, heightForMusicAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 120
     }
     
     func collectionView(_ collectionView: UICollectionView, widthForMusicAt indexPath: IndexPath) -> CGFloat {
         
-        let musicBaseModel = viewModel.musicList[indexPath.section]
-        
-       return CGFloat(musicBaseModel.musics[indexPath.row].size ?? 0.0)
+       return 120
         
     }
     
