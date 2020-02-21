@@ -43,7 +43,7 @@ extension ViewController: UICollectionViewDataSource,UICollectionViewDelegate {
     }
 }
 
-extension ViewController: MultiDirectionLayoutDelegate {
+extension ViewController: MultiDirectionLayoutV2Delegate {
     
     func collectionView(_ collectionView: UICollectionView, heightForMusicAt indexPath: IndexPath) -> CGFloat {
         return 60

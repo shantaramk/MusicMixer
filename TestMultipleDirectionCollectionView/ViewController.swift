@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     func configureCollectionViewFlowLayout() {
         
-        if let layout = collectionView?.collectionViewLayout as? MultiDirectionLayout {
+        if let layout = collectionView?.collectionViewLayout as? MultiDirectionLayoutV2 {
             
             layout.delegate = self
             

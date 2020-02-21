@@ -27,17 +27,17 @@ class MusicMixerViewModel: NSObject {
         var musicList = [MusicBaseModel]()
         
         let musicManager = MusicServiceManager()
-        for song in songList {
+        for (index, song) in songList.enumerated() {
             
             let musicBaseModel = MusicBaseModel()
             
-            for i in 0 ..< 2 {
+            for i in 0 ..< 8 {
                 
                 let stringPath = Bundle.main.path(forResource: song, ofType: "mp3")
                 
                 let duration = musicManager.duration(for: stringPath!)
                 
-                musicBaseModel.musics.append(MusicModel(title: songList[i], size: duration))
+                musicBaseModel.musics.append(MusicModel(title: songList[index], size: duration))
             }
             
             musicList.append(musicBaseModel)
